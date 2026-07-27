@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://martinsuijs.github.io/flight-website/sitemap.xml
