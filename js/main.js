@@ -41,7 +41,7 @@
         `Naam: ${naam}\nTelefoonnummer: ${telefoon}\nEmail: ${email}\n\nBericht:\n${bericht}`
       );
 
-      window.location.href = `mailto:info@sleepinbird.nl?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:info@sleepinbird.com?subject=${subject}&body=${body}`;
 
       status.hidden = false;
       status.className = "form-status is-success";
