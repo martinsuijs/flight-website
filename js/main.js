@@ -4,6 +4,7 @@
   const links = document.querySelectorAll(".nav-list a");
   const form = document.querySelector(".contact-form");
   const status = document.querySelector(".form-status");
+  const submitButton = form?.querySelector('button[type="submit"]');
 
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
@@ -20,33 +21,35 @@
   }
 
   if (form && status) {
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
 
-      const data = new FormData(form);
-      const naam = String(data.get("Naam") || "").trim();
-      const telefoon = String(data.get("Telefoonnummer") || "").trim();
-      const email = String(data.get("Email") || "").trim();
-      const bericht = String(data.get("Bericht") || "").trim();
-
-      if (!naam || !email || !bericht) {
-        status.hidden = false;
-        status.className = "form-status is-error";
-        status.textContent = "Vul naam, e-mail en bericht in.";
-        return;
-      }
-
-      const subject = encodeURIComponent(`Bericht via Flight-website van ${naam}`);
-      const body = encodeURIComponent(
-        `Naam: ${naam}\nTelefoonnummer: ${telefoon}\nEmail: ${email}\n\nBericht:\n${bericht}`
-      );
-
-      window.location.href = `mailto:info@sleepinbird.com?subject=${subject}&body=${body}`;
-
       status.hidden = false;
-      status.className = "form-status is-success";
-      status.textContent = "Je e-mailprogramma opent om het bericht te versturen.";
-      form.reset();
+      status.className = "form-status";
+      status.textContent = "Bezig met versturen…";
+      if (submitButton) submitButton.disabled = true;
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        });
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          status.className = "form-status is-success";
+          status.textContent = "Bedankt! Je bericht is verstuurd.";
+          form.reset();
+        } else {
+          throw new Error(result.message || "Versturen mislukt");
+        }
+      } catch (error) {
+        status.className = "form-status is-error";
+        status.textContent = "Versturen lukte niet. Probeer het later opnieuw of mail direct.";
+      } finally {
+        if (submitButton) submitButton.disabled = false;
+      }
     });
   }
 })();

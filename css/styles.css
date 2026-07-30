@@ -55,6 +55,10 @@ a {
   border: 0;
 }
 
+.botcheck {
+  display: none !important;
+}
+
 /* Header */
 .site-header {
   padding: clamp(1.5rem, 3vw, 2.75rem) var(--pad) 1.25rem;
@@ -317,6 +321,12 @@ a {
 .contact-form button:focus-visible {
   background: #9a1a03;
   transform: translateY(-1px);
+}
+
+.contact-form button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+  transform: none;
 }
 
 .form-status {

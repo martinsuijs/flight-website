@@ -184,18 +184,23 @@
           </p>
         </div>
 
-        <form class="contact-form" action="mailto:info@sleepinbird.com" method="post" enctype="text/plain">
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="ce2a8e2e-29e4-4f54-865b-07f3fa21cf76" />
+          <input type="hidden" name="subject" value="Bericht via Flight-website" />
+          <input type="hidden" name="from_name" value="Flight website" />
+          <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" />
+
           <label class="visually-hidden" for="naam">Naam</label>
-          <input id="naam" name="Naam" type="text" placeholder="Naam" required autocomplete="name" />
+          <input id="naam" name="name" type="text" placeholder="Naam" required autocomplete="name" />
 
           <label class="visually-hidden" for="telefoon">Telefoonnummer</label>
-          <input id="telefoon" name="Telefoonnummer" type="tel" placeholder="Telefoonnummer" autocomplete="tel" />
+          <input id="telefoon" name="phone" type="tel" placeholder="Telefoonnummer" autocomplete="tel" />
 
           <label class="visually-hidden" for="email">Email</label>
-          <input id="email" name="Email" type="email" placeholder="Email" required autocomplete="email" />
+          <input id="email" name="email" type="email" placeholder="Email" required autocomplete="email" />
 
           <label class="visually-hidden" for="bericht">Bericht</label>
-          <textarea id="bericht" name="Bericht" placeholder="Bericht" rows="6" required></textarea>
+          <textarea id="bericht" name="message" placeholder="Bericht" rows="6" required></textarea>
 
           <button type="submit">Verstuur</button>
           <p class="form-status" role="status" aria-live="polite" hidden></p>
