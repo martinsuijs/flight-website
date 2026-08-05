@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://martinsuijs.github.io/flight-website/sitemap.xml
+Sitemap: https://flighttotherollingstones.nl/sitemap.xml
