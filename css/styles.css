@@ -208,6 +208,184 @@ a {
   min-height: 12rem;
 }
 
+.impressie-cta {
+  margin: 1.5rem 0 0;
+}
+
+.text-link {
+  color: var(--red);
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  text-decoration: underline;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  margin-top: 1.5rem;
+}
+
+.photo-thumb {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: #eee;
+  cursor: pointer;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.photo-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.photo-thumb:hover img,
+.photo-thumb:focus-visible img {
+  transform: scale(1.04);
+}
+
+.gallery-page .gallery-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.gallery-page .logo-red-small {
+  max-width: min(100%, 220px);
+}
+
+.gallery-inner {
+  max-width: 1180px;
+}
+
+.back-link {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--red);
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+}
+
+.lightbox-dialog {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 1200px);
+  height: min(100%, 100vh);
+  max-height: calc(100vh - 2rem);
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: calc(100vh - 4.5rem);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+}
+
+.lightbox-close,
+.lightbox-nav {
+  position: absolute;
+  border: 0;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.75rem;
+  line-height: 1;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover,
+.lightbox-close:focus-visible,
+.lightbox-nav:focus-visible {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.lightbox-close {
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 2rem;
+  z-index: 2;
+}
+
+.lightbox-prev {
+  left: 0.25rem;
+}
+
+.lightbox-next {
+  right: 0.25rem;
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 0.35rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 700px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lightbox-nav {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+
 /* Band grid */
 .member-grid {
   list-style: none;
