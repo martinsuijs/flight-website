@@ -3,25 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Flight — Tributeband to The Rolling Stones</title>
-  <meta name="description" content="Flight to the Rolling Stones is een Nederlandse tributeband die het pure, rauwe werk uit de beginjaren van The Rolling Stones speelt. Boek de band voor jouw evenement." />
-  <meta name="keywords" content="Flight, Flight to the Rolling Stones, Rolling Stones tribute, Rolling Stones tributeband, tributeband, Stones coverband, Mick Jagger, live muziek, boeken band, Nederlandse tributeband" />
+  <title>Flight to the Rolling Stones | Nederlandse Rolling Stones tributeband</title>
+  <meta name="description" content="Flight to the Rolling Stones is een Nederlandse tributeband die het pure, rauwe werk uit de beginjaren van The Rolling Stones speelt. Boek de band voor jouw evenement, feest of festival." />
+  <meta name="keywords" content="Flight to the Rolling Stones, Rolling Stones tributeband, Rolling Stones tribute Nederland, Stones coverband, tributeband boeken, live muziek, Mick Jagger, Flight tributeband" />
   <meta name="author" content="Flight to the Rolling Stones" />
-  <meta name="robots" content="index, follow" />
-  <meta name="googlebot" content="index, follow" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="googlebot" content="index, follow, max-image-preview:large" />
+  <meta name="bingbot" content="index, follow" />
+  <meta name="geo.region" content="NL" />
+  <meta name="language" content="Dutch" />
   <link rel="canonical" href="https://www.flighttotherollingstones.nl/" />
+  <link rel="alternate" hreflang="nl" href="https://www.flighttotherollingstones.nl/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.flighttotherollingstones.nl/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="nl_NL" />
   <meta property="og:site_name" content="Flight to the Rolling Stones" />
-  <meta property="og:title" content="Flight — Tributeband to The Rolling Stones" />
+  <meta property="og:title" content="Flight to the Rolling Stones | Nederlandse Rolling Stones tributeband" />
   <meta property="og:description" content="Nederlandse tributeband die het pure, rauwe werk uit de beginjaren van The Rolling Stones speelt. Boek Flight voor jouw evenement." />
   <meta property="og:url" content="https://www.flighttotherollingstones.nl/" />
   <meta property="og:image" content="https://www.flighttotherollingstones.nl/assets/hero.jpg" />
   <meta property="og:image:alt" content="De band Flight to the Rolling Stones" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Flight — Tributeband to The Rolling Stones" />
+  <meta name="twitter:title" content="Flight to the Rolling Stones | Nederlandse Rolling Stones tributeband" />
   <meta name="twitter:description" content="Nederlandse tributeband die het pure, rauwe werk uit de beginjaren van The Rolling Stones speelt." />
   <meta name="twitter:image" content="https://www.flighttotherollingstones.nl/assets/hero.jpg" />
 
@@ -30,21 +35,46 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MusicGroup",
-    "name": "Flight to the Rolling Stones",
-    "alternateName": ["Flight", "Flight Tributeband"],
-    "description": "Nederlandse tributeband die het pure, rauwe werk uit de beginjaren van The Rolling Stones speelt.",
-    "url": "https://www.flighttotherollingstones.nl/",
-    "image": "https://www.flighttotherollingstones.nl/assets/hero.jpg",
-    "genre": ["Rock", "Tribute", "Rolling Stones"],
-    "email": "info@sleepinbird.com",
-    "member": [
-      { "@type": "Person", "name": "Peter Vermeij", "roleName": "Zang & Mondharmonica" },
-      { "@type": "Person", "name": "Martin Suijs", "roleName": "Zang & Gitaar" },
-      { "@type": "Person", "name": "Joaquín Lorenzo", "roleName": "Zang & Gitaar" },
-      { "@type": "Person", "name": "Marcial Lorenzo", "roleName": "Basgitaar" },
-      { "@type": "Person", "name": "Eric Pronk", "roleName": "Drums" },
-      { "@type": "Person", "name": "Ruud de Grood", "roleName": "Zang & Toetsen" }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.flighttotherollingstones.nl/#website",
+        "url": "https://www.flighttotherollingstones.nl/",
+        "name": "Flight to the Rolling Stones",
+        "description": "Nederlandse Rolling Stones tributeband",
+        "inLanguage": "nl-NL",
+        "publisher": { "@id": "https://www.flighttotherollingstones.nl/#band" }
+      },
+      {
+        "@type": "MusicGroup",
+        "@id": "https://www.flighttotherollingstones.nl/#band",
+        "name": "Flight to the Rolling Stones",
+        "alternateName": ["Flight", "Flight Tributeband", "Flight to the Rolling Stones tributeband"],
+        "description": "Nederlandse tributeband die het pure, rauwe werk uit de beginjaren van The Rolling Stones speelt.",
+        "url": "https://www.flighttotherollingstones.nl/",
+        "image": "https://www.flighttotherollingstones.nl/assets/hero.jpg",
+        "genre": ["Rock", "Tribute", "Rolling Stones", "Coverband"],
+        "email": "info@sleepinbird.com",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Netherlands"
+        },
+        "member": [
+          { "@type": "Person", "name": "Peter Vermeij", "roleName": "Zang & Mondharmonica" },
+          { "@type": "Person", "name": "Martin Suijs", "roleName": "Zang & Gitaar" },
+          { "@type": "Person", "name": "Joaquín Lorenzo", "roleName": "Zang & Gitaar" },
+          { "@type": "Person", "name": "Marcial Lorenzo", "roleName": "Basgitaar" },
+          { "@type": "Person", "name": "Eric Pronk", "roleName": "Drums" },
+          { "@type": "Person", "name": "Ruud de Grood", "roleName": "Zang & Toetsen" }
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "booking",
+          "email": "info@sleepinbird.com",
+          "telephone": "+31-6-43403099",
+          "availableLanguage": ["Dutch", "nl"]
+        }
+      }
     ]
   }
   </script>
